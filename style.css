@@ -1,0 +1,30 @@
+body {
+    background-color: lightblue;
+    margin-left: 10%;
+    margin-right: 10%;
+    border-style: dotted;
+    padding-bottom: 3%;
+    padding-left: 3%;
+    padding-right: 3%;
+}
+
+h1 {
+    text-align: center;
+    color: white;
+}
+
+h2 {
+    text-align: center;
+    color: white;}
+
+form {
+    text-align: center;
+    color: white;}
+
+fieldset {
+    border-style: none;
+}
+
+p {
+    color: white;
+}

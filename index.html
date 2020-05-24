@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Project02 - Conversion Machine</title>
+        <meta charset="utf-8">
+        <script type="text/javascript">
+            function calcT() {
+                var cups = document.getElementById("cups");
+                var teaspoons = document.getElementById("teaspoons");
+                var output = cups.value * 48;
+                teaspoons.value = output;
+            }           
+        </script>
+        <link rel="stylesheet" href="style.css">
+    </head>
+    <body>
+        <h1>Project02 - Conversion Machine</h1>
+        <h2>Volume Converter</h2>
+        <p>Have you ever been in the midst of preparing a fresh batch of
+            cookies, or some other delicious baked treat, when suddenly
+            you realize you've made a great mistake... You forgot to get
+            measuring cups and all you have is a teaspoon to measure out
+            all of your ingredients! Well, there is no need to fear. This
+            conversion program is the solution for you! Just enter in the
+            amount of <i>cups</i> that you need, and the program will give
+            you the same amount in <i>teaspoons</i>! Give it a try!
+        </p>
+        <form>
+            <fieldset>    
+                <label>Cups:</label> <input type="number" name="cups" id="cups"><br><br>
+                <label>Teaspoons: </label><input type="number" id="teaspoons"><br><br>
+                <input type="button" onclick="calcT()" value="Submit">
+                <input type="reset">
+            </fieldset>           
+        </form>     
+    </body>
+</html>
