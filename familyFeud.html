@@ -122,11 +122,11 @@
     <div id="level1.1">
         <h2 id="levelName">Level 1</h2>
         <h3 id="levelQuestion">Name Something That Moves Very Slowly: 8 answers</h3>
-        <label for="slow">Your Answer:</label>
-        <input type="text" id="slow" name="slow" value=" ">
+        <label for="slow2">Your Answer:</label>
+        <input type="text" id="slow2" name="slow" value=" ">
         <br>
 
-        <button type="button" onclick="check1()">Check</button>
+        <button type="button" onclick="check4()">Check</button>
     <!-- This button, when clicked, will make it so only the second level is visible -->
         <button type="button" onclick="view()">Next</button>
         <button type="button" onclick="oneToTwo()">One to Two</button>
@@ -181,6 +181,20 @@
         document.getElementById("levelName").innerHTML = "Level 2";
         document.getElementById("levelQuestion").innerHTML = "Name Something People Are Afraid Of: ";
     }
+    let levelOneAllGuessed = False;
+    let sloths = False;
+    let glaciers = False;
+    let snails = False;
+    function check4() {
+        let slow2 = document.getElementById("slow2");
+        if (slow2.value === "sloths") {
+            right++;
+            alert("Keep Going!");
+            document.getElementById("slow2").value = " ";
+            sloths = True;
+            alert(sloths);
+        }
+     }
 </script>
 </body>
 </html>
