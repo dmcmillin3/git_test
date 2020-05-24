@@ -138,20 +138,30 @@
         let first = document.getElementById("level1");
         let second = document.getElementById("level2");
         let third = document.getElementById("level3");
+        let fourth = document.getElementById("level1.1");
         if (counter === 0){
             first.style.visibility = "visible";
             second.style.visibility = "hidden";
             third.style.visibility = "hidden";
+            fourth.style.visibility = "visible";
         }
         if (counter === 1){
             first.style.visibility = "hidden";
             second.style.visibility = "visible";
             third.style.visibility = "hidden";
+            fourth.style.visibility = "visible";
         }
         if (counter === 2){
             first.style.visibility = "hidden";
             second.style.visibility = "hidden";
             third.style.visibility = "visible";
+            fourth.style.visibility = "visible";
+        }
+        if (counter === 3){
+            first.style.visibility = "hidden";
+            second.style.visibility = "hidden";
+            third.style.visibility = "visible";
+            fourth.style.visibility = "visible";
         }
         onclick = counter++;
     }
