@@ -9,12 +9,16 @@
                 var teaspoons = document.getElementById("teaspoons");
                 var output = cups.value * 48;
                 teaspoons.value = output;
-            }           
+            }
+            function changeTitle() {
+                var title = document.getElementByID("title");
+                title.InnerHTML("I have changed the title");
+            }
         </script>
         <link rel="stylesheet" href="style.css">
     </head>
     <body>
-        <h1>Project02 - Conversion Machine</h1>
+        <h1 id="title">Project02 - Conversion Machine</h1>
         <h2>Volume Converter</h2>
         <p>Have you ever been in the midst of preparing a fresh batch of
             cookies, or some other delicious baked treat, when suddenly
@@ -31,6 +35,7 @@
                 <label>Teaspoons: </label><input type="number" id="teaspoons"><br><br>
                 <input type="button" onclick="calcT()" value="Submit">
                 <input type="reset">
+                <input type="button" onclick="changeTitle()" value="Change Title">
             </fieldset>           
         </form>     
     </body>
