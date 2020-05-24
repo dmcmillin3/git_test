@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Family Feud</title>
+    <link href="https://fonts.googleapis.com/css?family=Abril+Fatface|Bebas+Neue|Patua+One&display=swap" rel="stylesheet">
+    <style>
+        body {
+            background-image: url("ombre.jpg");
+        }
+        .everything {
+            margin:auto;
+            width:75%;
+            background-color: #f6daa8;
+            padding: 15px;
+        }
+        .header {
+
+            text-align: center;
+            margin-left: 350px;
+            margin-right: 350px;
+            padding: 1px;
+            border-radius: 30px;
+        }
+        h1 {
+            background-color: #0070ff;
+            border-radius: 50px;
+            border-style: ridge;
+            border-color: #f5b500;
+            border-width: 5px;
+            color: #ff8d00;
+            font-size: 60px;
+            font-family: 'Abril Fatface', cursive;
+        }
+        .rules {
+            background-color: #0070ff;
+            margin-left: 50px;
+            margin-right: 50px;
+            text-align: center;
+            padding: 1px;
+            color: white;
+            border-radius: 10px;
+            border-color: #ff8d00;
+            border-style: solid;
+            border-width: 8px;
+            font-family: 'Muli', sans-serif;
+        }
+    </style>
+</head>
+<body onload="view()">
+<form>
+<div class="everything">
+    <div class="header">
+    <h1> FAMILY <br> FEUD </h1>
+    </div>
+
+    <!-- simplified rules so the user can understand what they have to do to play -->
+    <div class="rules">
+    <h2>Rules</h2>
+    <p>The game is played through levels. There will be a given number of possible answers, if your answer is not one of the most popular
+    then that counts as a strike, 3 strikes and you are out. You enter your ONE WORD answers into each given space, after click the "check"
+    button. You will then either be able to move on the the next level or you loose the game. Good Luck!</p>
+    </div>
+
+    <!-- this is the first level, there are going to be 8 questions which is the most there can be -->
+    <div id="level1">
+        <h2>Level 1</h2>
+        <h3>Name Something That Moves Very Slowly: 8 answers</h3>
+        <label for="slow">Your Answer:</label>
+        <input type="text" id="slow" name="slow" value=" ">
+        <br>
+
+        <button type="button" onclick="check1()">Check</button>
+    <!-- This button, when clicked, will make it so only the second level is visible -->
+        <button type="button" onclick="view()">Next</button>
+    </div>
+
+    <!-- This is the second level and only has 6 questions 2 less then the first -->
+    <div id="level2">
+        <h2>Level 2</h2>
+        <h3> Name Something People Are Afraid Of</h3>
+        <label for="scared1">Answer 1:</label>
+        <input type="text" id="scared1" name="scared1" value=" ">
+        <br>
+        <label for="scared2">Answer 2:</label>
+        <input type="text" id="scared2" name="scared2" value=" ">
+        <br>
+        <label for="scared3">Answer 3:</label>
+        <input type="text" id="scared3" name="scared3" value=" ">
+        <br>
+        <label for="scared4">Answer 4:</label>
+        <input type="text" id="scared4" name="scared4" value=" ">
+        <br>
+        <label for="scared5">Answer 5:</label>
+        <input type="text" id="scared5" name="scared5" value=" ">
+        <br>
+        <label for="scared6">Answer 6:</label>
+        <input type="text" id="scared6" name="scared6" value=" ">
+        <br>
+    <!-- This button, when clicked, will make it so that only the third level is visible -->
+        <button type="button" onclick="view()">Next</button>
+    </div>
+
+    <!-- This is the third level and only has 4 questions 2 less than the second and the shortest of all of them -->
+    <div id="level3">
+        <h2>Level 3</h2>
+        <h3>Name Something That Flies</h3>
+        <label for="fly1">Answer 1:</label>
+        <input type="text" id="fly1" name="fly1" value=" ">
+        <br>
+        <label for="fly2">Answer 2:</label>
+        <input type="text" id="fly2" name="fly2" value=" ">
+        <br>
+        <label for="fly3">Answer 3:</label>
+        <input type="text" id="fly3" name="fly3" value=" ">
+        <br>
+        <label for="fly4">Answer 4:</label>
+        <input type="text" id="fly4" name="fly4" value=" ">
+        <br>
+
+    </div>
+</div>
+</form>
+<script>
+    let counter = 0;
+    function view() {
+        let first = document.getElementById("level1");
+        let second = document.getElementById("level2");
+        let third = document.getElementById("level3");
+        if (counter === 0){
+            first.style.visibility = "visible";
+            second.style.visibility = "hidden";
+            third.style.visibility = "hidden";
+        }
+        if (counter === 1){
+            first.style.visibility = "hidden";
+            second.style.visibility = "visible";
+            third.style.visibility = "hidden";
+        }
+        if (counter === 2){
+            first.style.visibility = "hidden";
+            second.style.visibility = "hidden";
+            third.style.visibility = "visible";
+        }
+        onclick = counter++;
+    }
+    let right = 0;
+    let wrong = 0;
+    function check1() {
+        let slow = document.getElementById("slow");
+        if (slow.value === "turtle" || slow.value === "sloth" || slow.value === "glaciers"|| slow.value === "snails" || slow.value === "worms" || slow.value === "babies" || slow.value === "slugs" ||  slow.value === "school"){
+            right++;
+            alert("Keep Going!");
+            document.getElementById("slow").value = " ";
+        }
+    }
+</script>
+</body>
+</html>
