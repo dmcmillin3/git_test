@@ -1,41 +1,58 @@
 <!DOCTYPE html>
-<html lang="en">
+<html>
     <head>
-        <title>Project02 - Conversion Machine</title>
         <meta charset="utf-8">
-        <script type="text/javascript">
-            function calcT() {
-                var cups = document.getElementById("cups");
-                var teaspoons = document.getElementById("teaspoons");
-                var output = cups.value * 48;
-                teaspoons.value = output;
+        <title>Project: Blog</title>
+        <style>
+            body {
+                background-color:rgb(198,224,234);
+                font-family: sans-serif;
             }
-            function changeTitle() {
-                document.getElementById("title").innerHTML = "I have changed the title!";
+            h1 {
+                text-align:center;
             }
-        </script>
-        <link rel="stylesheet" href="style.css">
+            p {
+                color:rgb(181,131,94);
+                line-height:1.5em;
+                font-size:15px;
+            }
+            .heading{
+                color:rgb(181,131,140);
+                font-family:monospace;
+            }
+            .date {
+                color: rgb(0,80,155);
+            }
+            #future-plans {
+                font-weight:bold;
+                font-style:italic;
+            } 
+        </style>
     </head>
     <body>
-        <h1 id="title">Project02 - Conversion Machine</h1>
-        <h2>Volume Converter</h2>
-        <p>Have you ever been in the midst of preparing a fresh batch of
-            cookies, or some other delicious baked treat, when suddenly
-            you realize you've made a great mistake... You forgot to get
-            measuring cups and all you have is a teaspoon to measure out
-            all of your ingredients! Well, there is no need to fear. This
-            conversion program is the solution for you! Just enter in the
-            amount of <i>cups</i> that you need, and the program will give
-            you the same amount in <i>teaspoons</i>! Give it a try!
-        </p>
-        <form>
-            <fieldset>    
-                <label>Cups:</label> <input type="number" name="cups" id="cups"><br><br>
-                <label>Teaspoons: </label><input type="number" id="teaspoons"><br><br>
-                <input type="button" onclick="calcT()" value="Submit">
-                <input type="reset">
-                <input type="button" onclick="changeTitle()" value="Change Title">
-            </fieldset>           
-        </form>     
+        
+        <h1 class="heading">Zion's Blog</h1>
+
+        <h3 class="heading">Contents</h3>
+        <ul>
+            <a href="#first-post"><li>My Life</li></a>
+            <a href="#second-post"><li>Coronavirus</li></a>
+            <a href="#third post"><li>My Hair Keeps Growing</li></a>
+        </ul>
+        
+        <h2 id="first-post" class="heading">My Life</h2>
+        
+        <p>I like to workout and get fit. I am a gamer and try to make games. I have made games on scratch, roblox, etc. I am currently learning CSS Scripting on Khan  Accademy. I love to go to Canada on my vacation because it's really peacful over there. I have a skill of drawing  because when I draw/doodle I come up with cool designs. I have a secret, which is that I'm afraid of being by myself. When I sleep I always think too much, but I have two loving parents that come and check on me.   </p>
+        
+        <h2 id="second-post" class="heading">Coronavirus</h2>
+        
+        <p>First off, I just want to say that this <em>coronavirus</em> is driving me nuts.</p> 
+        <p>Once the coronavirus started I didn't know how bad it could get. Once it got the extreme I was going mis going out, mostly to go out and chill and relax with some friends. Now, I can't do that and I feel like I'm in prison.
+        <p>It is so sad how many people die each day because of the coronavirus. It's also so annoying when people don't <strong>STAY HOME</strong></p>
+        <p> 
+        <p id="future-plans">I intend to try to know all types of Scripting. I also want to make a successfull game on roblox with a lot of visits.</p>
+        
+        <h2 id="third post" class="heading">My Hair Keeps Growing</h2>
+        <p>For the past <strong>3 Months</strong> I have't cut my hair and my mom has been going crazy because I haven't been cutting my head. After the coronavirus is over I'm going <strong>straight to the barber shop.</strong></p>   
     </body>
 </html>
