@@ -31,7 +31,17 @@
     </head>
     <body>
         
-        <h1 class="heading">Zion's Blog</h1>
+        <h1 id="blog-title" class="heading">Zion's Website</h1> <----------------------------
+        
+        <script>
+            var x = 3;
+            var y = 4;
+            var answer = 3 + 4;
+            alert(answer);
+            
+            var title = document.getElementById("blog-title")
+            title.innerHTML() = "Zion's Website";
+        </script>
 
         <h3 class="heading">Contents</h3>
         <ul>
@@ -56,4 +66,3 @@
         <p>For the past <strong>3 Months</strong> I have't cut my hair and my mom has been going crazy because I haven't been cutting my head. After the coronavirus is over I'm going <strong>straight to the barber shop.</strong></p>   
     </body>
 </html>
-
