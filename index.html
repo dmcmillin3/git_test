@@ -33,24 +33,24 @@
         
         <h1 id="blog-title" class="heading">Zion's Blog</h1>
         <input type="text" id="text-input"><p id="answers"></p>
+		<button onclick="changeDate()">Click this to display today's date</button>
         <script>
-            var x = 3;
-            var y = 4;
-            var answer = 3 + 4;
-            alert(answer);
             function Greeting(name) {
                 console.log("Hello, "+name);
-                var age = console.write("What is your ag;
+                var age = console.write("What is your age?: ");
                 var answers = document.getElementById('answers')
-                answers.innerHTML() = age;
+                answers.innerHTML = age;
             }
             Greeting('devon');
+			function changeDate() {
+				document.getElementById('answers').innerHTML = Date();
+			}
             
             var title = document.getElementById("blog-title")
-            title.innerHTML = "Zion's Website";
+            title.innerHTML = "Zion's Website";			
         </script>
 
-        <h3 class="heading">Contents</h3>
+        <h3 class="heading">Navigation</h3>
         <ul>
             <a href="#first-post"><li>My Life</li></a>
             <a href="#second-post"><li>Coronavirus</li></a>
